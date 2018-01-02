@@ -61,6 +61,7 @@ def test_decoder_shapes(decoder, IMG_EMBED_SIZE, vocab, s):
     all_shapes = []
     for t in tensors_to_test:
         _ = s.run(t, feed_dict=get_feed_dict_for_testing(decoder, IMG_EMBED_SIZE, vocab))
+        print(t, _.shape)
         all_shapes.extend(_.shape)
     return all_shapes
 
