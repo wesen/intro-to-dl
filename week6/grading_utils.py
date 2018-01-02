@@ -81,4 +81,5 @@ def test_validation_loss(decoder, s, generate_batch, val_img_embeds, val_caption
                                                        32,
                                                        20))
     val_loss /= 1000.
+    print(val_loss)
     return val_loss
